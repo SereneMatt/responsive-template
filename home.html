@@ -3,15 +3,88 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Responsive template</title>
+	<title>Mobile First responsive template</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="dist/app.css" rel="stylesheet">
 </head>
 <body>
+<!-- Form -->
+<div class="container">
+	<h1 class="brand"><span>Responsive!</span></h1>
+	<div class="wrapper">
+		<div class="info">
+			<h3>Web design</h3>
+			<ul>
+				<li>Kochi</li>
+				<li>+7777</li>
+				<li>test@responsive.com</li>
+			</ul>
+		</div>
+		<div class="contact">
+			<h3>Email Me</h3>
+			<form action="">
+				<p class="full">
+					<label for="">Location</label>
+					<input type="text" name="location">
+				</p>
+				<p class="full">
+					<button>Find</button>
+				</p>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Header -->
+<header id="showcase" class="grid">
+	<div class="bg-image"></div>
+	<h1>Welcome to responsive template</h1>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit numquam accusantium autem delectus laboriosam doloremque labore nemo, soluta aperiam architecto?</p>
+	<a href="section-b" class="btn">Read more</a>
+</header>
+
+<!-- Main Area -->
+<main id="main">
+	<section id="section-a" class="grid">
+		<div class="content-wrap">
+			<h2 class="content-title">Mobile first</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis consequuntur quia alias deserunt, excepturi similique!</p>
+		</div>
+	</section>
+</main>
+
+<!-- Section B -->
+<section id="section-b" class="grid">
+	<ul>
+		<li>
+			<div class="card">
+				<img src="./images/icon-locator.png" alt="">
+			</div>
+		</li>
+	</ul>
+</section>
+
+<!-- Section C -->
+<section id="section-c" class="grid">
+	<div class="content-wrap"></div>
+</section>
+
+<!-- Section D -->
+<section id="section-d" class="grid">
+	<div class="box">
+		<p>Event</p>
+	</div>
+	<div class="box">
+		<h2 class="content-title">About Us</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, commodi.</p>
+	</div>
+</section>
+
+<!-- Footer -->
+<footer></footer>
 
 <!-- Form -->
 <form action="" class="form-container needs-validation" novalidate> <!-- novalidate to disable browser default check -->
