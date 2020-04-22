@@ -1,17 +1,27 @@
+/* The class selectors use the BEM (Block Element Modifier) model */
+
 /* Core Universal Styles */
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
+html {
+  /* Default font-size of browser is 16px */
+  font-size: 62.5%; /* 10px = (10 / 16) * 100 */
+}
+
 body {
+  box-sizing: border-box; /* best practice */
   color: #777;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -29,21 +39,21 @@ body {
   
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top:40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
-.logo {
-  height: 35px;
+.header__logo {
+  height: 3.5rem;
 }
 
-.logo:hover {
+.header__logo:hover {
   animation: moveInLeft 5s ease-out;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 26%;
   left: 50%;
@@ -55,23 +65,23 @@ body {
   /* hack to fix shaking of animation */
   backface-visibility: hidden;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   text-transform: uppercase;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 21px;
+  letter-spacing: 2.1rem;
   animation: moveInLeft 5s ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 19px;
+  letter-spacing: 1.9rem;
 }
 
 /* Animations */
@@ -84,7 +94,7 @@ body {
   }
   /* intermediate position */
   80% {
-    transform: translate(20px);
+    transform: translate(2rem);
   }
   /* end position */
   100% {
@@ -98,11 +108,11 @@ body {
   0% {
     opacity: 0;
     /* Negative value goes to the left and positive to the right */
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   /* intermediate position */
   80% {
-    transform: translate(10px);
+    transform: translate(1rem);
   }
   /* end position */
   100% {
@@ -115,7 +125,7 @@ body {
   /* start position */
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   /* end position */
@@ -128,9 +138,9 @@ body {
 
 .btn:link,
 .btn:visited {
-  border-radius: 100px;
+  border-radius: 10rem;
   display: inline-block;
-  padding: 15px 40px;
+  padding: 15px 4rem;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -138,7 +148,7 @@ body {
 }
 
 .btn:active {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2); /* 20% opacity */
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, .2); /* 20% opacity */
   transform: translateY(-1px);
 }
 
@@ -148,13 +158,13 @@ body {
   transform: translateY(-3px);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: gray;
 }
 
 .btn::after {
-  border-radius: 100px;
+  border-radius: 10rem;
   content: ""; /* always specify content */
   display: inline-block;
   height: 100%;
@@ -166,7 +176,7 @@ body {
   z-index: -1;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -175,7 +185,7 @@ body {
   transform: scaleX(1.4) scaleY(1.6);
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   /* hack to apply styles before animation */
   animation-fill-mode: backwards;
