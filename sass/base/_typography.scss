@@ -1,0 +1,63 @@
+body { // body styles related to typography
+  color: $color-grey-dark;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding: 3rem;
+}
+
+// All headers are typography
+.heading-primary { // This is not necessarily a component
+  /* hack to fix shaking of animation */
+  backface-visibility: hidden;
+  color: $color-white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2.1rem;
+    animation: moveInLeft 5s ease-out;
+  }
+  
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.9rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block; // to have auto width
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text; // So cool!!!!
+  color: transparent;
+  letter-spacing: 2px; // why pixels? It's such a small value.
+  transition: all .2s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1); // Scale 110%
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2); // 20% opacity
+  }
+}
+
+.heading-secondary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
