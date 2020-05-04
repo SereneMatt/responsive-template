@@ -1,0 +1,17 @@
+// Styles for html, body, etc.
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html { // Global definition remains in base file
+  /* Default font-size of browser is 16px */
+  font-size: 62.5%; /* 10px = (10 / 16) * 100 */
+}
+
+body {
+  box-sizing: border-box; /* best practice */
+}

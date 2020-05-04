@@ -1,0 +1,31 @@
+.header { // header is not a component. It is a layout element.
+  background-image: linear-gradient(
+                      to right bottom, 
+                      rgba($color-primary-light, 0.822), 
+                      rgba($color-primary-dark, 0.808)), 
+                    url(../images/bg.jpg);
+  background-position: top;
+  background-size: cover;
+  /* polygon(x y, x y, x y, x y) */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); // height is 75% of view port
+  height: 95vh;
+  position: relative;
+  
+  &__logo_box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
