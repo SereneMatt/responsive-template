@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+	<link rel="stylesheet" href="css/icon-font.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,600,700&amp;lang=en" />
 	
@@ -40,12 +41,12 @@
 				<div class="col-1-of-2">
 					<h3 class="heading-tertiary u-margin-bottom-small">You're going to like cats</h3>
 					<p class="paragraph">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus hic nemo unde iure molestias vitae itaque placeat consequuntur neque quidem, nesciunt magnam nostrum doloribus in tenetur, iste, fugit magni deserunt!
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ducimus expedita obcaecati accusamus iste pariatur optio reiciendis!
 					</p>
 
 					<h3 class="heading-tertiary u-margin-bottom-small">Climb trees like you have never before</h3>
 					<p class="paragraph">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ducimus expedita obcaecati accusamus iste pariatur optio reiciendis!
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ducimus expedita obcaecati accusamus iste pariatur optio reiciendis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ducimus expedita obcaecati accusamus iste pariatur optio reiciendis!
 					</p>
 
 					<a href="#" class="btn-text">See more &rarr;</a>
@@ -53,12 +54,232 @@
 
 				<div class="col-1-of-2">
 					<div class="composition">
-						<img src="images/cat-1.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-						<img src="images/cat-2.jpg" alt="Photo 2" class="composition__photo composition__photo--p1">
-						<img src="images/cat-3.jpg" alt="Photo 3" class="composition__photo composition__photo--p1">
+						<img src="images/cat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+						<img src="images/cat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+						<img src="images/cat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
 					</div>
 				</div>
 			</div>
+		</section>
+
+		<section class="section-features">
+			<div class="row">
+				<div class="col-1-of-4">
+					<!-- Do not add scaling/padding to grid columns. Add another div if you want to scale -->
+					<div class="feature-box"> <!-- reusable component -->
+						<i class="feature-box__icon icon-basic-world"></i>
+						<h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
+						<p class="feature-box__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-1-of-4">
+					<!-- Do not add scaling/padding to grid columns. Add another div if you want to scale -->
+					<div class="feature-box"> <!-- reusable component -->
+						<i class="feature-box__icon icon-basic-compass"></i>
+						<h3 class="heading-tertiary u-margin-bottom-small">Meaw world</h3>
+						<p class="feature-box__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-1-of-4">
+					<!-- Do not add scaling/padding to grid columns. Add another div if you want to scale -->
+					<div class="feature-box"> <!-- reusable component -->
+						<i class="feature-box__icon icon-basic-map"></i>
+						<h3 class="heading-tertiary u-margin-bottom-small">Meet cats</h3>
+						<p class="feature-box__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-1-of-4">
+					<!-- Do not add scaling/padding to grid columns. Add another div if you want to scale -->
+					<div class="feature-box"> <!-- reusable component -->
+						<i class="feature-box__icon icon-basic-heart"></i>
+						<h3 class="heading-tertiary u-margin-bottom-small">Find your favourite</h3>
+						<p class="feature-box__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-tours">
+			<div class="u-center-text u-margin-bottom-big">
+				<h2 class="heading-secondary">
+					Popular destinations
+				</h2>
+			</div>
+
+			<div class="row">
+				<!-- Card 1 -->
+				<div class="col-1-of-3"> <!-- do not touch the grid columns -->
+					<div class="card">
+						<!-- Modifier distinguishes cards -->
+						<div class="card__side card__side--front">
+							<div class="card__picture card__picture--1"> <!-- Block is 'card' and not card__side -->
+								&nbsp;
+							</div>
+							<h4 class="card__heading">
+								<!-- Three different colors. So, modifier. -->
+								<span class="card__heading-span card__heading-span--1">The Coastlands</span>
+							</h4>
+							<div class="card__details">
+								<!-- Don't go crazy with BEM on list-->
+								<ul>
+									<li>Food</li>
+									<li>Hotel</li>
+									<li>Flying</li>
+									<li>Beaches</li>
+									<li>Photography</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card__side card__side--back card__side--back-1">
+							<div class="card__cta">
+								<div class="card__contact-box">
+									<!-- A word of text can go in a paragraph -->
+									<p class="card__contact-destination">Destination</p>
+									<p class="card__contact-number">#1</p>
+								</div>
+								<a href="#" class="btn btn--white">Visit now!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="col-1-of-3">
+					<div class="card">
+						<!-- Modifier distinguishes cards -->
+						<div class="card__side card__side--front">
+							<div class="card__picture card__picture--2"> <!-- Block is 'card' and not card__side -->
+								&nbsp;
+							</div>
+							<h4 class="card__heading">
+								<!-- Three different colors. So, modifier. -->
+								<span class="card__heading-span card__heading-span--2">The Backwaters</span>
+							</h4>
+							<div class="card__details">
+								<!-- Don't go crazy with BEM on list-->
+								<ul>
+									<li>Ripples</li>
+									<li>Drinks</li>
+									<li>Seafood</li>
+									<li>Grandola</li>
+									<li>Sun</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card__side card__side--back card__side--back-2">
+							<div class="card__cta">
+								<div class="card__contact-box">
+									<!-- A word of text can go in a paragraph -->
+									<p class="card__contact-destination">Destination</p>
+									<p class="card__contact-number">#2</p>
+								</div>
+								<a href="#" class="btn btn--white">Visit now!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="col-1-of-3">
+					<div class="card">
+						<!-- Modifier distinguishes cards -->
+						<div class="card__side card__side--front">
+							<div class="card__picture card__picture--3"> <!-- Block is 'card' and not card__side -->
+								&nbsp;
+							</div>
+							<h4 class="card__heading">
+								<!-- Three different colors. So, modifier. -->
+								<span class="card__heading-span card__heading-span--3">The Sunny Beaches</span>
+							</h4>
+							<div class="card__details">
+								<!-- Don't go crazy with BEM on list-->
+								<ul>
+									<li>Waves</li>
+									<li>Sand</li>
+									<li>Fly fishing</li>
+									<li>Water sports</li>
+									<li>Swimming</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card__side card__side--back card__side--back-3">
+							<div class="card__cta">
+								<div class="card__contact-box">
+									<!-- A word of text can go in a paragraph -->
+									<p class="card__contact-destination">Destination</p>
+									<p class="card__contact-number">#3</p>
+								</div>
+								<a href="#" class="btn btn--white">Visit now!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="u-center-text u-margin-top-huge">
+				<a href="#" class="btn btn--green">Discover more</a>
+			</div>
+		</section>
+
+		<section class="section-stories">
+			<div class="bg-video">
+				<video class="bg-video__content" autoplay muted loop>
+					<source src="images/video.mp4" type="video/mp4">
+					<source src="images/video.webm" type="video/webm">
+					Your browser is not supported!
+				</video>
+			</div>
+			<div class="u-center-text u-margin-bottom-big">
+				<h2 class="heading-secondary">
+					Happy cats!
+				</h2>
+			</div>
+
+			<div class="row">
+				<div class="story">
+					<!-- Used for image and caption -->
+					<figure class="story__shape">
+						<img src="images/story-1.png" alt="Cat talking" class="story__img">
+						<figcaption class="story__caption">Meaw Kitty</figcaption>
+					</figure>
+					<div class="story__text">
+						<h3 class="heading-tertiary u-margin-bottom-small">I like fried fish</h3>
+						<p>
+							Lorem ipsum dolor sit amet. Consequuntur fuga praesentium fugit sunt facere cum eius? Aperiam autem officia at doloremque sint, consequuntur delectus amet ea minima ipsa voluptate earum. consectetur adipisicing elit. Consequuntur fuga praesentium fugit sunt facere cum eius? Aperiam autem officia at doloremque sint, consequuntur delectus amet ea minima ipsa voluptate earum.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="story">
+					<!-- Used for image and caption -->
+					<figure class="story__shape">
+						<img src="images/story-2.jpg" alt="Cat talking" class="story__img">
+						<figcaption class="story__caption">Poocha Kutty</figcaption>
+					</figure>
+					<div class="story__text">
+						<h3 class="heading-tertiary u-margin-bottom-small">I like climbing trees</h3>
+						<p>
+							Lorem ipsum dolor sit amet. Consequuntur fuga praesentium fugit sunt facere cum eius? Aperiam autem officia at doloremque sint, consequuntur delectus amet ea minima ipsa voluptate earum. consectetur adipisicing elit. Consequuntur fuga praesentium fugit sunt facere cum eius? Aperiam autem officia at doloremque sint, consequuntur delectus amet ea minima ipsa voluptate earum.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="u-center-text u-margin-top-huge">
+				<a href="#" class="btn-text">Share my story &rarr;</a>
+			</div>			
 		</section>
 	</main>
 

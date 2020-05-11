@@ -1,0 +1,167 @@
+.card {
+  // FUNCTIONALITY
+
+  /* Perspective always is styled on parent element */
+  perspective: 150rem; // to get the feeling of coming towards user. Experiment until you get the right look.
+  -moz-perspective: 150rem; // new property and hence not implemented in all browers
+  position: relative; // always give parent a relative position
+  height: 52rem;
+
+  &__side {
+    font-size: 2rem;
+    height: 52rem;
+    /* for animation. Give 'ease' for smooth one. */
+    transition: all .8s ease; // eight seconds to see what's happening. 'all' for more than one animation
+
+    position: absolute; // writing this will collapse parent's height
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; // fix for hiding
+    border-radius: 3px;
+    overflow: hidden; // clip path breaks it. Fix it.
+    box-shadow: $shadow-1;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back { // already rotated 180deg on page load
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
+    }
+  }
+
+  &:hover &__side--front { // hover on main element and not on card side
+    transform: rotateY(-180deg); // half a rotation. Not 360deg!
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0); // Go back to 0 from 180deg
+  }
+
+  // FRONT SIDE STYLING
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen; // Does not work on IE
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // Define webkit fix first.
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // Modern CSS property; fix it with -webkit
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      // Image will overlap parent element and hide border radius. Fix it using overflow: hidden.
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                        url(../images/tour-1.jpg); // Get images from unsplash
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+                        url(../images/tour-2.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+                        url(../images/tour-3.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    /* To have heading on top of picture */
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span { /* Why not inside &__heading? It's a new element in BEM. */
+    padding: 1rem 1.5rem;
+    // Treat one entity as two lines
+    -webkit-box-decoration-break: clone; // Use -webkit- prefix for Chrome
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom,
+                          rgba($color-secondary-light, .85),
+                          rgba($color-secondary-dark, .85));
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom,
+                          rgba($color-primary-light, .85),
+                          rgba($color-primary-dark, .85));
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom,
+                          rgba($color-tertiary-light, .85),
+                          rgba($color-tertiary-dark, .85));
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      // center in the container in a simpler way
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  // BACK SIDE STYLING
+  &__cta {
+    position: absolute;
+    /* Centering method */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // transforming to center
+    width: 90%;
+    text-align: center; // position link button to center
+  }
+
+  &__contact-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__contact-destination {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__contact-number {
+    font-size: 6rem;
+    font-weight: 100; // thin text
+  }
+}

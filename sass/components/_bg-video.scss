@@ -1,0 +1,18 @@
+.bg-video {
+  // Way to place on top
+  position: absolute; // remember to make parent relative
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    // Even if 100% dimensions are given, it maintains video's aspect ratio
+    object-fit: cover; // use cover to maintain aspect ratio. 'fill' breaks aspect ratio.
+  }
+}
