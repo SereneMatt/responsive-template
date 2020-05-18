@@ -4,7 +4,7 @@
   &__photo {
     width: 55%; // flexible images for responsive design
     box-shadow: $shadow-2;
-    border-radius: 2px;
+    border-radius: $border-radius;
     position: absolute;
     z-index: 10;
     transition: all .2s;
