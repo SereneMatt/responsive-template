@@ -17,8 +17,9 @@ jobs:
         echo "${{ github.event.pull_request.merged }}"
         echo "${{ github.base_ref }}"
         echo "${{ github.head_ref }}"
+        echo "${{ github.ref }}"
       
     - name: Test PR
-      if: "${{ github.event.pull_request.merged == true }}"
+      if: "${{ github.event_name == 'push' && github.ref == 'ref/head/master' }}"
       run: echo "${{ github.event_name }}"
  
