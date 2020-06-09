@@ -12,18 +12,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Cache
-      uses: actions/cache@v1.1.2
-      with:
-      # A directory to store and save the cache
-        path: ~/.npm
-        # An explicit key for restoring and saving the cache
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - run: npm ci
-    - run: npm run compile:sass
+    - name: Test PR
+    - run: echo github.event_name
