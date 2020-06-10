@@ -10,11 +10,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: echo
-      run: |
-        echo ${GITHUB_REF##*/}
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=BRANCH_NAME;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
       
     - name: Test PR
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      run: echo "success"
+      run: echo ${{ steps.extract_branch.outputs.BRANCH_NAME }}
  
