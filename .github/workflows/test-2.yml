@@ -12,14 +12,9 @@ jobs:
 
     - name: echo
       run: |
-        echo "${{ github.event_name }}"
-        echo "${{ github.event.action }}"
-        echo "${{ github.event.pull_request.merged }}"
-        echo "${{ github.base_ref }}"
-        echo "${{ github.head_ref }}"
-        echo "${{ github.ref }}"
+        echo "${{ $(GITHUB_REF#'refs/heads/') }}"
       
     - name: Test PR
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      run: echo "${{ github.event_name }}"
+      run: echo "success"
  
