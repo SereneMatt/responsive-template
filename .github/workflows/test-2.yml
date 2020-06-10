@@ -16,8 +16,8 @@ jobs:
       id: extract_branch
       
     - name: Test PR
-      if: ${{ GITHUB_BASE_REF == 'master' }}
+      if: ${{ github.base_ref == 'master' }}
       run: |
         echo ::set-env name=BRANCH::$(echo $GITHUB_REF)
-        echo env.BRANCH
+        echo ${{ env.BRANCH }}
  
