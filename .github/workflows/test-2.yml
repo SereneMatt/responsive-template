@@ -16,7 +16,7 @@ jobs:
       id: extract_branch
       
     - name: Test PR
-      if: ${{ $BRANCH == 'refs/heads/master' }}
+      if: ${{ env.BRANCH == 'refs/heads/master' }}
       run: echo 'success'
       env: 
         BRANCH: echo ${{ steps.extract_branch.outputs.BRANCH_NAME }}
