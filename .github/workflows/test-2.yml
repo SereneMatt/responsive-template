@@ -12,10 +12,11 @@ jobs:
 
     - name: Extract branch name
       shell: bash
-      run: echo ${GITHUB_BASE_REF}
+      run: echo $GITHUB_BASE_REF
       id: extract_branch
       
     - name: Test PR
+      if: $GITHUB_BASE_REF == 'master'
       run: |
         echo ::set-env name=BRANCH::$(echo $GITHUB_REF)
         echo env.BRANCH
