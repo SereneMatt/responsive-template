@@ -2,7 +2,7 @@ name: CI
 
 on: 
   repository_dispatch:
-    types: [trigger_workflow]
+    types: trigger_workflow
 
     
 jobs:
