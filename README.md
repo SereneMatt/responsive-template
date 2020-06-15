@@ -1,1 +1,4 @@
-# Responsive template using Bootstrap 4
+# Development
+
+npm i -g live-server
+live-server

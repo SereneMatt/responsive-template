@@ -14,6 +14,7 @@
     border-bottom: 3px solid transparent; // invisible border bottom on page load to escape jump on focus
     width: 90%;
     display: block;
+    transition: all .3s;
 
     &:focus { // important for people using keyboard only and not use mouse
       outline: none;
@@ -45,5 +46,51 @@
     opacity: 0; // The element will still be on the page without visibility hidden
     visibility: hidden; // Use visibility hidden with opacity
     transform: translateY(-4rem); // kind of moving down
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+  
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block; // not to make them occupy the entire line
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem; // circle
+      width: 1.3rem; // circle
+      border-radius: 50%;
+      position: absolute; // trick for positioning in the center
+      top: 50%; // trick for positioning in the center
+      left: 50%; // trick for positioning in the center
+      transform: translate(-50%, -50%); // trick for positioning in the center
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
   }
 }
