@@ -1,9 +1,8 @@
 name: CI
 
 on: 
-  repository_dispatch:
-    types: trigger_workflow
-
+  schedule:
+    - cron: '* * * * *'
     
 jobs:
   build:
