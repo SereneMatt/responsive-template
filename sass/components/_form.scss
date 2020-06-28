@@ -80,10 +80,8 @@
       height: 1.3rem; // circle
       width: 1.3rem; // circle
       border-radius: 50%;
-      position: absolute; // trick for positioning in the center
-      top: 50%; // trick for positioning in the center
-      left: 50%; // trick for positioning in the center
-      transform: translate(-50%, -50%); // trick for positioning in the center
+      // trick for positioning in the center
+      @include center-align;
       background-color: $color-primary;
       opacity: 0;
       transition: opacity .2s;

@@ -140,11 +140,8 @@
 
   // BACK SIDE STYLING
   &__cta {
-    position: absolute;
     /* Centering method */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); // transforming to center
+    @include center-align;
     width: 90%;
     text-align: center; // position link button to center
   }
