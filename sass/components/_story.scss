@@ -39,7 +39,7 @@
   }
 
   &__caption {
-    @include center-align; // it always has a position relative in parent
+    @include absCenter; // it always has a position relative in parent
     color: $color-white;
     text-transform: uppercase;
     font-size: 1.75rem;
