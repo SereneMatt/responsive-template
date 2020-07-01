@@ -81,7 +81,7 @@
       width: 1.3rem; // circle
       border-radius: 50%;
       // trick for positioning in the center
-      @include center-align;
+      @include absCenter;
       background-color: $color-primary;
       opacity: 0;
       transition: opacity .2s;

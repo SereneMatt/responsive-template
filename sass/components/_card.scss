@@ -141,7 +141,7 @@
   // BACK SIDE STYLING
   &__cta {
     /* Centering method */
-    @include center-align;
+    @include absCenter;
     width: 90%;
     text-align: center; // position link button to center
   }
