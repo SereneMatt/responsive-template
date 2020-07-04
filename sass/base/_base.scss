@@ -7,11 +7,28 @@
   padding: 0;
 }
 
-html { // Global definition remains in base file
+html { // Global definition remains in base file. Define what 1rem is.
   /* Default font-size of browser is 16px */
-  font-size: 62.5%; /* 10px = (10 / 16) * 100 */
+  font-size: 62.5%; /* If you need 10px = (10 / 16) * 100 */
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px, 9 / 16
+  }
+  
+  @include respond(tab-port) { // check the order!! - put smaller one last for smaller resolutions
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12, 12/16
+  }
 }
 
 body {
   box-sizing: border-box; /* best practice */
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
