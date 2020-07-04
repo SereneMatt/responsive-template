@@ -7,10 +7,16 @@
   background-position: top;
   background-size: cover;
   /* polygon(x y, x y, x y, x y) */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); // height is 75% of view port
   height: 95vh;
   position: relative;
   
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
   &__logo_box {
     position: absolute;
     top: 4rem;

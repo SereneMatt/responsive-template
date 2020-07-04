@@ -161,4 +161,48 @@
     font-size: 6rem;
     font-weight: 100; // thin text
   }
+
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: $shadow-1;
+
+    &__side {
+      height: auto;
+      position: relative; // no longer have two sides and hence not absolute
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front { // hover on main element and not on card side
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // BACK TURNED FRONT SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__contact-box {
+      margin-bottom: 3rem;
+    }
+
+    &__contact-number {
+      font-size: 4rem;
+    }
+  }
 }
