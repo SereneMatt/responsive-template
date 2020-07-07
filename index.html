@@ -35,7 +35,9 @@
 
 	<header class="header">
 		<div class="header__logo-box">
-			<img src="images/icon-logo.jpg" alt="Logo" class="header__logo">
+			<img 
+				srcset="images/icon-logo.jpg 1x, images/icon-logo-2x.png 2x"
+				alt="Logo" class="header__logo">
 		</div>
 		<div class="header__text-box">
 			<h1 class="heading-primary">
@@ -75,9 +77,23 @@
 
 				<div class="col-1-of-2">
 					<div class="composition">
-						<img src="images/cat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-						<img src="images/cat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-						<img src="images/cat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+						<!-- Divide image width with screen width to get view port width -->
+						<img srcset="images/cat-1-small.jpg 300w, images/cat-1-large.jpg 1000w"
+								 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+								 alt="Photo 1"
+								 class="composition__photo composition__photo--p1"
+								 src="images/cat-1-small.jpg">
+						<img srcset="images/cat-2-small.jpg 300w, images/cat-2-large.jpg 1000w"
+								 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+								 alt="Photo 2" class="composition__photo composition__photo--p2"
+								 src="images/cat-2-small.jpg">
+						<img srcset="images/cat-3-small.jpg 300w, images/cat-3-large.jpg 1000w"
+								 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+						     alt="Photo 3" class="composition__photo composition__photo--p3"
+						     src="images/cat-3-small.jpg">
+						<!-- <img src="images/cat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1"> -->
+						<!-- <img src="images/cat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+						<img src="images/cat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
 					</div>
 				</div>
 			</div>
@@ -352,6 +368,12 @@
 
 	<footer class="footer">
 		<div class="footer__logo-box">
+			<picture class="footer__logo">
+				<source srcset="images/icon-logo.jpg 1x, images/icon-logo-2x.png 2x"
+								media="(max-width: 37.5em)">
+				<img srcset="images/icon-logo.jpg 1x"
+				src="images/icon-logo.jpg 1x" alt="Full logo" class="footer__logo">
+			</picture>
 			<img src="images/icon-logo-2x.png" alt="Full logo" class="footer__logo">
 		</div>
 		<div class="row">
@@ -378,7 +400,11 @@
 	<div class="popup" id="popup">
 		<div class="popup__content">
 			<div class="popup__left">
-				<img src="images/hiking-1.jpg" alt="Tour photo" class="popup__img">
+				<!-- <img src="images/hiking-1.jpg" alt="Tour photo" class="popup__img"> Convert to em. 900/16 = 56.25em-->
+				<img srcset="images/hiking-1-small.jpg 300w, images/hiking-1.jpg 1000w"
+				     sizes="(max-width: 60em) 60vw, (max-width: 1200px) 95vw, 56.25em"
+						 alt="Tour photo" class="popup__img"
+						 src="images/hiking-1-small.jpg">
 				<img src="images/hiking-2.jpg" alt="Tour photo" class="popup__img">
 			</div>
 			<div class="popup__right">
