@@ -1,4 +1,3 @@
 # Development
 
-npm i -g live-server
-live-server
+```npm run start```

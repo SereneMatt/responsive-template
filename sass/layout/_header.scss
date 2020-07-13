@@ -6,19 +6,26 @@
                     url(../images/bg-320.jpg);
   background-position: top;
   background-size: cover;
-  /* polygon(x y, x y, x y, x y) */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); // height is 75% of view port
-  height: 95vh;
+  height: 80vh; // Give smaller height so that user knows there is more to load on page downwards
   position: relative;
 
+  // Clip-path is not supported in older versions of Firefox
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    /* polygon(x y, x y, x y, x y) */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); // height is 75% of view port
+    height: 95vh;
+  }
+
   // Resolution of Apple retina screen. Media queries are always in em.
+  // For safari - -webkit-min-device-pixel-ratio: 2 pixels
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
          (min-width: 125em) {
     background-image: linear-gradient(
                       to right bottom, 
-                      rgba($color-secondary-light, 0.822), 
-                      rgba($color-secondary-dark, 0.808)), 
+                      rgba($color-primary-light, 0.822), 
+                      rgba($color-primary-dark, 0.808)), 
                     url(../images/bg.jpg);
   }
 
