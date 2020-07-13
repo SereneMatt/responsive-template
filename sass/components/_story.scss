@@ -28,13 +28,18 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    // pre-requisites for shape is width, height and float
-    -webkit-shape-outside: circle(50% at 50% 50%); // for Safari
-    shape-outside: circle(50% at 50% 50%); // radius will be half the width and height
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); // Do not use margin to move text
     position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      // pre-requisites for shape is width, height and float
+      -webkit-shape-outside: circle(50% at 50% 50%); // for Safari
+      shape-outside: circle(50% at 50% 50%); // radius will be half the width and height
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -43,9 +48,13 @@
 
   &__img {
     width: 100%; // if width does not fit, specify height
-    backface-visibility: hidden;
     transform: scale(1.4);
     transition: all .5s;
+
+    @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
   }
 
   &__text {

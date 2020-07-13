@@ -17,6 +17,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; // fix for hiding
     border-radius: 3px;
     overflow: hidden; // clip path breaks it. Fix it.
