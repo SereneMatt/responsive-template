@@ -118,27 +118,6 @@
     }
   }
 
-  &__details {
-    padding: 3rem;
-
-    ul {
-      list-style: none;
-      width: 80%;
-      // center in the container in a simpler way
-      margin: 0 auto;
-
-      li {
-        text-align: center;
-        font-size: 1.5rem;
-        padding: 1rem;
-
-        &:not(:last-child) {
-          border-bottom: 1px solid $color-grey-light-2;
-        }
-      }
-    }
-  }
-
   // BACK SIDE STYLING
   &__cta {
     /* Centering method */

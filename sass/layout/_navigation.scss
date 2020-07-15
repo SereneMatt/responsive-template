@@ -63,39 +63,19 @@
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  &__list {
-    @include absCenter;
-    list-style: none;
-    text-align: center;
-    width: 100%;
-  }
-
   &__item {
-    margin: 1rem;
-  }
+    @include absCenter;
 
-  &__link {
-    &:link,
-    &:visited {
-      display: inline-block; // link is always inline block for transition to work and padding to work. Place it at the beginning
-      font-size: 3rem;
-      font-weight: 300;
-      padding: 1rem 2rem;
-      color: $color-white;
-      text-decoration: none;
-      text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: $color-white;
+    text-transform: uppercase;
+    transition: all .4s;
+
+    &:hover {
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
       background-size: 230%;
-      transition: all .4s;
-
-      span {
-        margin-right: 1.5rem;
-        display: inline-block;
-      }
-    }
-
-    &:hover,
-    &:active {
       background-position: 100%;
       color: $color-primary;
       transform: translateX(1rem);
@@ -109,7 +89,7 @@
 
   &__checkbox:checked ~ &__nav {
     opacity: 1;
-    width: 110%;
+    width: 100%;
   }
 
   // ICON
